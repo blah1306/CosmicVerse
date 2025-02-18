@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cosmic-verse</title>
+<link rel=stylesheet href="cosmicverse.css">
+</head>
+<body>
+  <!-- nav bar -->
+  <nav>
+    <div class="logoimg"><img src="cvlogo.png" alt="logo"></div>
+    <div class="logo">COSMIC-VERSE</div>
+    <a onmouseover="Hover()"href="cosmicverse.html">Home</a>
+    <a onmouseover="Hover()"href="spacepedia">Spacepedia</a>
+    <a onmouseover="Hover()"href="quiz.html">Quiz</a>
+    <a onmouseover="Hover()"href="about">About us</a>
+  </nav>
+
+  <!-- animation -->
+  <div class="container">
+    <div class="sun">
+    <img src="./sun.png" alt="sun">
+    </div>
+    <div class="mercury"></div>
+    <div class="venus"></div>
+    <div class="earth">
+      <div class="moon"></div>
+    </div>
+    <div class="mars"></div>
+    <div class="jupiter"></div>
+    <div class="saturn"></div>
+    <div class="uranus"></div>
+    <div class="neptune"></div>
+    </div> 
+    <!-- sidebar -->
+    <aside class="planet-sidebar">
+      <div class="planet-list">
+        <ins  onmouseover="Hover()"style="font-family: gt; font-size: xx-large;text-decoration: none;"><b>I N S I G H T S</b></ins><br><br>
+        <div class="planets">
+        <ul>
+            <div class="asun"><img src="icons8-sun-64.png" alt=""><li onmouseover="Hover()"onclick="playSound(),showPopup('Sun','  EQUATORIAL DIAMETER :    1.39 M KM','MASS : 1.99 x 10^39 KG',' SURFACE TEMPERATURE  5778K (5 505&deg;)','The sun is core is the hottest part, reaching temperatures of 15 million degrees Celsius.')">Sun</li></div>
+            <div class="amercury"><img src="icons8-mercury-64.png" alt=""><li onmouseover="Hover()"onclick="playSound(),showPopup('Mercury','  EQUATORIAL DIAMETER :   4,880 KM','MASS : 3.285 x 10^23 kg',' SURFACE TEMPERATURE  333°F (167°C))','Mercury is the smallest planet in our solar system.Mercury’s surface is covered in impact craters, one of the largest impact craters in the solar system at about 1,550 km wide.One day on Mercury takes 59 Earth days')">Mercury</li></div>
+            <div class="avenus"><img src="icons8-venus-64.png" alt=""><li onmouseover="Hover()"onclick="playSound(),showPopup('Venus', '  EQUATORIAL DIAMETER :  12,104 KM  ','MASS : 4.867 × 10^24 KG',' SURFACE TEMPERATURE  867°F (464°C))',' Hottest planet,even though Mercury is closer to the Sun,due to its thick CO₂ atmosphere and greenhouse effect.Venus spins in the opposite direction to most planets (retrograde rotation)' )">Venus</li></div>
+            <div class="aearth"><img src="icons8-earth-50.png" alt=""><li onmouseover="Hover()"onclick="playSound(),showPopup('Earth','  EQUATORIAL DIAMETER :    12,756 KM','MASS : 5.97219 × 10^24  KG',' SURFACE TEMPERATURE 59 °F (15 °C) ','Only planet known to support life; has liquid water,breathable atmosphere and magnetic field..Earth has one natural satellite, the Moon, .Earth rotates on its axis once every 24 hours, creating day and night',)">Earth</li></div>
+            <div class="amars"><img src="icons8-mars-64.png" alt=""><li onmouseover="Hover()"onclick="playSound(),showPopup('Mars','  EQUATORIAL DIAMETER :    6,779 KM','MASS : 6.39 × 10^23 KG',' SURFACE TEMPERATURE  -85°F (-65°C)',' Mars gets its reddish color from iron oxide (rust) on its surface.Mars has Olympus Mons, the largest volcano in the solar system, standing about 22 km (13.6 miles)high, nearly three times taller than Mount Everest.')">Mars</li></div>
+            <div class="ajupiter"><img src="icons8-jupiter-60.png" alt=""><li onmouseover="Hover()"onclick="playSound(),showPopup('Jupiter','  EQUATORIAL DIAMETER :    139,820 KM','MASS :  1.898 × 10^27 KG',' SURFACE TEMPERATURE  -166°F  (-110°C)',' Jupiter is the biggest planet in the solar system. Has a Great Red Spot,a massive storm that has been raging for over 300 years and is twice the size of Earth.Jupiter has at least 95 known moons, including the four largest, called the Galilean moons.')">Jupiter</li></div>
+            <div class="asaturn"><img src="icons8-saturn-60.png" alt=""><li onmouseover="Hover()"onclick="playSound(),showPopup('Saturn','  EQUATORIAL DIAMETER :    120,536 KM','MASS : 5.683 × 10^26  KG',' SURFACE TEMPERATURE  -220°F (-140°C))',' Saturn was named after the Roman god of time and harvest.Saturn is famous for its beautiful ring system, made of ice, rock, dust.Saturn spins once every 10.7 hours, making it the second-fastest rotating planet. Saturn has 146 known moons.')">Saturn</li></div>
+            <div class="auranus"><img src="icons8-uranus-64.png" alt=""><li onmouseover="Hover()"onclick="playSound(),showPopup('Uranus','  EQUATORIAL DIAMETER :    50,724 KM','MASS : 8.681 × 10^25 KG',' SURFACE TEMPERATURE  -320°F (-195°C))', 'Uranus is tilted on its side by 98 degrees,possibly due to a massive collision in the past, meaning it essentially rolls around the Sun rather than spinning upright like other planets.Uranus has some of the fastest winds in the solar system, ')">Uranus</li></div>
+            <div class="aneptune"><img src="icons8-neptune-64.png" alt=""><li onmouseover="Hover()" onclick="playSound(),showPopup('Neptune','  EQUATORIAL DIAMETER :    49,528 KM','MASS : 1.024 × 10^26 KG',' SURFACE TEMPERATURE  -330°F (-200°C)','Neptune is named after the Roman god of the sea, fitting its deep blue appearance.Neptune appears deep blue due to methane in its atmosphere.Neptune has the fastest winds in the solar system, reaching speeds of 2,100 km/h .')">Neptune</li></div>
+          </ul>
+    
+     </aside> 
+<!-- pop up -->
+     <div class="overlay" id="overlay"></div>
+
+     <div class="popup" id="popup">
+      <center>
+         <h2 id="planet-name"></h2>
+         <br>
+         <!-- <p id="planet-info"></p> -->
+         <p id ="diameter"></p>
+         <br>
+         <p id="mass"></p>
+         <br>
+         <p id="surface-temperature"></p>
+         <br>
+         <!-- <h4 id="fun"></h4> -->
+          
+         <p id="ff"></p>
+        </center>
+         <button class="close-btn" onclick="closePopup()" >X</button>
+     </div>
+     <!-- sound Effects -->
+      <audio id="hoe" src='hover.mp4'></audio>
+
+
+     <audio id="soundEffect">
+      <source src="click.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <embed src="bgm.mp3" loop="true" autostart="true" width="2" height="0">
+<!-- pop up -->
+    <footer>
+      <center>
+      <div class="footerbar">
+      <div class="signup">
+          <p style="color: rgb(252, 252, 252);font-size:40px;font-family: gt;"><b>COSMIC-VERSE</b></p>
+          <p style="font-size: large; font-family:gt;">Want to stay upadated?<br>Join our newsletter</p>
+          <form >
+          <label for="text" style="font-family: fourche;"><b>EMAIL</b> &nbsp;</label>
+          <input onmouseover="Hover()" type="text" style="border-radius: 7px; font-family: fourche;" placeholder="    Enter your email" required>
+          <input onmouseover="Hover()"style="border-radius: 5px;" type="Submit">
+          <br>
+          
+          <h3 style="font-family: gt;">And also hop onto our socials :)</h3>
+            <div onmouseover="Hover()" class="socials">
+              <img src="https://img.icons8.com/?size=100&id=1481&format=png&color=FFFFFF" alt="pint">&nbsp;
+              <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=FFFFFF" alt="inst">&nbsp;
+              <img src="https://img.icons8.com/?size=100&id=84521&format=png&color=FFFFFF" alt="tt">&nbsp;
+              <img src="https://img.icons8.com/?size=100&id=118468&format=png&color=FFFFFF" alt="fb">&nbsp;
+              <img src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=FFFFFF" alt="x">
+            </div>
+          <br><br>
+          
+      </form>
+      <hr width="45%" style="opacity: 0.4;">
+      <p style="font-family: fourche;">Copyrights &copy; Cosmic-verse 2025. All rights reserved.</p>
+      </div>
+      </div>
+      
+    </center>
+  </footer>
+
+  <script src="cosmicverse.js"></script>
+</body>
+</html>

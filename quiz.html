@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Quiz</title>
+    <link rel="stylesheet" href="quiz.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1 style="font-family: gt;">SOLAR SYSTEM QUIZ</h1>
+        <p id="question">What is the largest planet in the solar system?</p>
+
+        <div class="options" >
+            <button style="font-family: fourche" onclick="checkAnswer(this)" data-answer="false">Earth</button>
+            <button style="font-family: fourche" onclick="checkAnswer(this)" data-answer="false">Mars</button>
+            <button style="font-family: fourche" onclick="checkAnswer(this)" data-answer="true">Jupiter</button>
+            <button style="font-family: fourche" onclick="checkAnswer(this)" data-answer="false">Venus</button>
+        </div>
+
+        <p id="result"></p>
+        <button class="next-btn" onclick="nextQuestion()">NEXT QUESTION</button>
+    </div>
+
+
+    <script src="quiz.js"></script> 
+</body>
+</html>
